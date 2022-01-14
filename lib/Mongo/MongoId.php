@@ -27,7 +27,7 @@ class MongoId implements Serializable, TypeInterface, JsonSerializable
         throw new \Exception('Serialization is not supported.');
     }
 
-    public function __unserialize()
+    public function __unserialize($serialized)
     {
         throw new \Exception('Serialization is not supported.');
     }
