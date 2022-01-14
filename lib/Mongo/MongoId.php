@@ -22,6 +22,16 @@ use MongoDB\BSON\ObjectID;
 
 class MongoId implements Serializable, TypeInterface, JsonSerializable
 {
+    public function __serialize()
+    {
+        throw new \Exception('Serialization is not supported.');
+    }
+
+    public function __unserialize()
+    {
+        throw new \Exception('Serialization is not supported.');
+    }
+
     /*
      * @var ObjectID
      */
